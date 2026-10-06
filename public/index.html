@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lostnation essentials: graphic tees and everyday streetwear made for the in-between.">
+    <title>Lostnation | Everyday is a statement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="announcement">Free delivery on orders over ₦80,000 <span>↗</span></div>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Lostnation home">LOST<span>NATION</span></a>
+        <nav class="main-nav" aria-label="Main navigation"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#journal">Journal</a></nav>
+        <div class="header-actions">
+            <a class="text-link" href="#shop">Search</a>
+            <a class="text-link" href="#login">Login</a>
+            <a class="text-link" href="#register">Register</a>
+            <a class="bag-link" href="#checkout">Bag <span class="bag-count">02</span></a>
+        </div>
+    </header>
+    <main id="top">
+        <section class="hero container"><div class="hero-copy"><p class="eyebrow">Drop 04 / SS26</p><h1>Made for<br><em>the in-between.</em></h1><p class="hero-intro">Quiet pieces for loud lives. Lostnation makes considered everyday uniforms with a point of view.</p><a class="button button-dark" href="#shop">Shop the drop <span>↘</span></a></div><div class="hero-art" aria-label="Lostnation graphic t-shirt preview" role="img"><div class="sticker sticker-top">LN-04</div><img class="shirt-photo shirt-photo-hero" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85" alt="White oversized t-shirt"><div class="hero-note">01 / 04<br><strong>THE DRIFTER TEE</strong></div></div></section>
+        <section class="ticker" aria-label="Collection highlights"><div class="ticker-track"><span>Independent by design</span><b>✳</b><span>Built for the long way home</span><b>✳</b><span>Independent by design</span><b>✳</b><span>Built for the long way home</span></div></section>
+        <section class="shop container" id="shop"><div class="section-heading"><div><p class="eyebrow">The collection</p><h2>New arrivals</h2></div><a class="arrow-link" href="#shop">View all <span>↗</span></a></div><div class="product-grid"><article class="product-card" data-product="Drifter graphic tee" data-color="White" data-price="42000" data-description="A relaxed heavyweight tee with a clean graphic finish. Cut for everyday movement."><div class="product-image clay"><span class="product-label">01</span><img class="shirt-photo" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85" alt="White heavyweight t-shirt" loading="lazy"><button class="quick-add" type="button">Quick add +</button></div><div class="product-info"><div><h3>Drifter graphic tee</h3><p>White / Heavyweight cotton</p></div><strong>₦42,000</strong></div></article><article class="product-card" data-product="Coordinates tee" data-color="Black" data-price="45000" data-description="A soft relaxed-fit tee with a bold screen print and an easy everyday silhouette."><div class="product-image ink"><span class="product-label">02</span><img class="shirt-photo" src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=85" alt="Black relaxed fit t-shirt" loading="lazy"><button class="quick-add" type="button">Quick add +</button></div><div class="product-info"><div><h3>Coordinates tee</h3><p>Black / Screen print</p></div><strong>₦45,000</strong></div></article><article class="product-card" data-product="Signal tee" data-color="Natural" data-price="40000" data-description="An understated natural cotton tee with a roomy fit and a soft hand feel."><div class="product-image bone"><span class="product-label">03</span><img class="shirt-photo" src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=700&q=85" alt="Natural cotton t-shirt" loading="lazy"><button class="quick-add" type="button">Quick add +</button></div><div class="product-info"><div><h3>Signal tee</h3><p>Natural / Relaxed fit</p></div><strong>₦40,000</strong></div></article></div></section>
+        <section class="statement" id="story"><div class="container statement-inner"><p class="eyebrow">Why Lostnation</p><h2>Wear the<br><em>unfamiliar.</em></h2><p>We make clothes for people who take the scenic route. Limited runs, honest materials, and graphics that leave room for interpretation.</p><a class="arrow-link light-link" href="#journal">Read our story <span>↗</span></a></div></section>
+        <section class="journal container" id="journal"><div class="section-heading"><div><p class="eyebrow">From the journal</p><h2>Field notes</h2></div><a class="arrow-link" href="#journal">Read journal <span>↗</span></a></div><div class="journal-grid"><article><div class="journal-art grid-art">NO<br>FIXED<br>ADDRESS</div><p class="eyebrow">Dispatch 001</p><h3>Notes from the long way home</h3></article><article><div class="journal-art type-art">GO<br>YOUR<br>OWN<br>WAY.</div><p class="eyebrow">Dispatch 002</p><h3>A uniform for moving through the world</h3></article></div></section>
+        <section class="checkout container" id="checkout">
+            <div class="checkout-intro">
+                <p class="eyebrow">Demo checkout</p>
+                <h2>Your bag,<br><em>your way.</em></h2>
+                <p>Try the local checkout simulation for the ₦87,000 demo order. No real payment is processed.</p>
+            </div>
+            <form class="payment-form" action="../php/payments/payment.php" method="post">
+                <div class="form-top"><h3>Payment simulation</h3><span class="secure-mark">Local demo</span></div>
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+                <button class="button button-dark checkout-button" type="submit">Simulate ₦87,000 payment <span>↗</span></button>
+                <p class="form-footnote">Demo only: no card details are collected and no real charge is made.</p>
+            </form>
+        </section>
+    </main>
+    <div class="product-modal" id="product-modal" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><section class="product-detail" role="dialog" aria-modal="true" aria-labelledby="detail-title"><button class="modal-close" type="button" aria-label="Close product details" data-close-modal>×</button><img id="detail-image" src="" alt=""><div class="detail-copy"><p class="eyebrow">Lostnation / Drop 04</p><h2 id="detail-title">Product</h2><p id="detail-description"></p><div class="detail-meta"><span id="detail-color">Color</span><strong id="detail-price">₦0</strong></div><label for="detail-size">Select size</label><select id="detail-size"><option>Small</option><option>Medium</option><option>Large</option><option>XL</option></select><button class="button button-dark detail-add" id="detail-add" type="button">Add to bag <span>↗</span></button><p class="detail-note">Free delivery over ₦80,000 · Easy returns</p></div></section></div>
+    <div class="auth-modal modal" id="login-modal" aria-hidden="true">
+        <div class="modal-panel">
+            <button class="close" type="button" aria-label="Close login form">×</button>
+            <h3>Welcome back</h3>
+            <form id="login-form">
+                <label for="login-email">Email</label>
+                <input id="login-email" name="email" type="email" placeholder="you@email.com" required>
+                <label for="login-password">Password</label>
+                <input id="login-password" name="password" type="password" placeholder="Enter password" required>
+                <button class="button button-dark" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <div class="auth-modal modal" id="register-modal" aria-hidden="true">
+        <div class="modal-panel">
+            <button class="close" type="button" aria-label="Close registration form">×</button>
+            <h3>Create account</h3>
+            <form id="register-form">
+                <div class="form-row">
+                    <div>
+                        <label for="first-name">First name</label>
+                        <input id="first-name" name="firstName" type="text" required>
+                    </div>
+                    <div>
+                        <label for="last-name">Last name</label>
+                        <input id="last-name" name="lastName" type="text" required>
+                    </div>
+                </div>
+                <label for="reg-email">Email</label>
+                <input id="reg-email" name="email" type="email" required>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phoneNumber" type="tel" required>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required>
+                <button class="button button-dark" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <footer class="site-footer"><div class="brand">LOST<span>NATION</span></div><p>Built for everywhere.</p><div class="footer-links"><a href="#shop">Instagram</a><a href="#shop">Contact</a><a href="#shop">Returns</a></div><small>© 2026 Lostnation</small></footer>
+    <script src="js/main.js"></script>
+    <script src="js/store.js"></script>
+</body>
+</html>

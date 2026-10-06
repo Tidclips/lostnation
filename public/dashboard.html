@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lostnation Account Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Dashboard</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="nav-link active">Overview</a></li>
+                    <li><a href="#profile" class="nav-link">Profile</a></li>
+                    <li><a href="#orders" class="nav-link">Orders</a></li>
+                    <li><a href="#payment" class="nav-link">Payment</a></li>
+                    <li><a href="#support" class="nav-link">Support</a></li>
+                    <li><a href="#logout" class="nav-link logout">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-left">
+                    <span class="brand-badge">LOST NATION / DROP 04</span>
+                    <h1 id="page-title">Dashboard</h1>
+                </div>
+                <div class="user-info">
+                    <span id="user-name">Customer Name</span>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23d95531'/%3E%3Ccircle cx='20' cy='15' r='8' fill='%23f2eee6'/%3E%3Cpath d='M8 34c2-6 8-9 12-9s10 3 12 9' fill='%23f2eee6'/%3E%3C/svg%3E" alt="Profile" class="profile-pic">
+                </div>
+            </header>
+
+            <section id="overview" class="content-section active">
+                <div class="welcome-panel">
+                    <div class="welcome-copy">
+                        <p class="eyebrow">Your account</p>
+                        <h2>Welcome back.</h2>
+                        <p class="welcome-lead">Your latest drop is moving through production and your account is ready for the next order.</p>
+                    </div>
+                    <div class="mini-stack">
+                        <span class="status-pill">Order in review</span>
+                        <button class="ghost-btn" onclick="switchSection('orders')">Track order</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <h3>Order Status</h3>
+                        <p id="order-status">In review</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💳</div>
+                        <h3>Payment Status</h3>
+                        <p id="payment-status">Pending</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🛍️</div>
+                        <h3>Saved Items</h3>
+                        <p id="saved-items">3</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🚚</div>
+                        <h3>Shipping</h3>
+                        <p id="shipping-status">Awaiting dispatch</p>
+                    </div>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="activity-panel">
+                        <div class="panel-header">
+                            <h3>Recent activity</h3>
+                            <span>Today</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="dot orange"></span>
+                            <div>
+                                <strong>Order placed</strong>
+                                <small>Drifter graphic tee • ₦42,000</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="dot dark"></span>
+                            <div>
+                                <strong>Payment pending</strong>
+                                <small>Awaiting confirmation</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="dot light"></span>
+                            <div>
+                                <strong>Profile updated</strong>
+                                <small>Delivery details refreshed</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h3>Quick Actions</h3>
+                        <div class="actions-grid">
+                            <button class="action-btn" onclick="switchSection('profile')">Edit profile</button>
+                            <button class="action-btn" onclick="switchSection('payment')">Pay now</button>
+                            <button class="action-btn" onclick="switchSection('orders')">View orders</button>
+                            <button class="action-btn" onclick="switchSection('support')">Contact support</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="profile" class="content-section">
+                <h2>Profile</h2>
+                <form id="profile-form" class="form-grid">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" id="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" id="last-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Address</label>
+                        <textarea id="address" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </section>
+
+            <section id="orders" class="content-section">
+                <h2>Orders</h2>
+                <div id="orders-list" class="orders-list">
+                    <p>Loading orders...</p>
+                </div>
+            </section>
+
+            <section id="payment" class="content-section">
+                <h2>Payment</h2>
+                <div class="payment-info">
+                    <div class="payment-card">
+                        <h3>Cart total</h3>
+                        <p class="price">₦87,000</p>
+                        <p id="payment-desc">Complete your payment to confirm your Lostnation order.</p>
+                        <p><strong>Current Status:</strong> <span id="current-payment-status">Pending</span></p>
+                        <button id="pay-btn" class="btn btn-primary">Pay now</button>
+                    </div>
+                </div>
+
+                <div class="payment-history">
+                    <h3>Payment history</h3>
+                    <div id="payment-list">
+                        <p>No payments yet</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="support" class="content-section">
+                <h2>Support</h2>
+                <div class="info-card">
+                    <p><strong>Email:</strong> hello@lostnation.com</p>
+                    <p><strong>Response time:</strong> Within 24 hours</p>
+                    <p><strong>Dispatch window:</strong> Monday to Friday</p>
+                    <p>For order updates, size questions, or returns, contact the team with your order number.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
