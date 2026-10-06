@@ -1,0 +1,23 @@
+# Local environment
+.env
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build artifacts
+cache/
+logs/
+*.log
+
+# OS files
+desktop.ini
